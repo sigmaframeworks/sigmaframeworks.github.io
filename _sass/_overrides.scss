@@ -1,0 +1,57 @@
+.col-auto {
+  flex: 0 0 auto;
+}
+
+strong, .strong {
+  font-weight: 500;
+}
+b, .bold {
+  font-weight: 600;
+}
+
+.b-l {
+  border-left: 1px solid #ccc;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.text-large {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.text-big {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.text-thin {
+  font-weight: 300;
+}
+
+.card .list-group-flush > .list-group-item {
+  border-width: 1px 0 !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.card-group > .card {
+  //display: flex !important;
+}
+
+.carousel-control {
+  .icon-prev, .icon-next {
+    margin-top: -1.5rem;
+    font-size: 3rem;
+  }
+}

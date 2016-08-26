@@ -1,0 +1,77 @@
+.language-scss {
+    position: relative;
+
+    &:after {
+        content      : 'SCSS';
+        font-size    : .5em;
+        font-weight  : 500;
+        background   : #4A706A;
+        color        : #fff;
+        padding      : .3em .8em;
+        position     : absolute;
+        top          : 0;
+        right        : 0;
+        border-radius: 0 0 0 4px;
+    }
+}
+
+.language-json {
+    position: relative;
+
+    &:after {
+        content      : 'JSON';
+        font-size    : .5em;
+        font-weight  : 500;
+        background   : #F27143;
+        color        : #fff;
+        padding      : .3em .8em;
+        position     : absolute;
+        top          : 0;
+        right        : 0;
+        border-radius: 0 0 0 4px;
+    }
+}
+
+.language-ts {
+    position: relative;
+
+    &:after {
+        content      : 'Typescript';
+        font-size    : .5em;
+        font-weight  : 500;
+        background   : #1971A3;
+        color        : #fff;
+        padding      : .3em .8em;
+        position     : absolute;
+        top          : 0;
+        right        : 0;
+        border-radius: 0 0 0 4px;
+    }
+
+    .err {
+        border    : none !important;
+        background: none !important;
+    }
+}
+
+.language-html {
+    position: relative;
+
+    &:after {
+        content      : 'HTML';
+        font-size    : .5em;
+        font-weight  : 500;
+        background   : #149364;
+        color        : #fff;
+        padding      : .3em .8em;
+        position     : absolute;
+        top          : 0;
+        right        : 0;
+        border-radius: 0 0 0 4px;
+    }
+
+    .err {
+        border    : none !important;
+        background: none !important;
+    }
+}

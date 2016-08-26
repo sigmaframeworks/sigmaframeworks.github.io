@@ -1,0 +1,14 @@
+name: Sigma Frameworks
+description: We create UI Frameworks built-on aurelia
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+syntax_highlighter_opts:
+  line_numbers: true
+
+# Gems
+gems: [jekyll-paginate, jekyll-mentions]
+paginate: 5
+permalink: /:year-:month-:day/:title
