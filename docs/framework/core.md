@@ -195,6 +195,19 @@ layout: docs-layout
     </ui-row>
     ```
 
+    * Horizontal alignment for row layout
+      * `start`
+      * `end`
+      * `center`
+      * `spaced`
+    * Vertical alignment for row layout
+      * `top`
+      * `bottom`
+      * `middle`
+      * `stretch`
+
+    * To read more about CSS3 FlexBox visit [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
   * __Column__
 
     Flexbox element, default basis `auto`.
@@ -204,13 +217,17 @@ layout: docs-layout
         <!-- content -->
     </ui-column>
     ```
-    `auto`: auto fit to content size
 
-    `fill`: fill available space
-
-    `full`: wrap if necessary and take 100% space
-
-    `width`: sets the `flex-basis` property
+    * Self Alignment
+      * `top`
+      * `bottom`
+      * `middle`
+      * `stretch`
+    * Sizing
+      * `auto`: auto fit to content size
+      * `fill`: fill available space
+      * `full`: wrap if necessary and take 100% space
+      * `width`: sets the `flex-basis` property
 
     Applicable sizes `xs`,`sm`,`md`,`lg`,`xl` `1-12`.
 
