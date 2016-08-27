@@ -208,6 +208,8 @@ layout: docs-layout
 
     * To read more about CSS3 FlexBox visit [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
+<br/>
+
   * __Column__
 
     Flexbox element, default basis `auto`.
