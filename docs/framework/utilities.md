@@ -12,6 +12,7 @@ layout: docs-layout
 `@import(UIApplication)`
 
 * __Properties__
+  * `IsAuthenticated`: Property used to enable/disable authentication driven elements like main side-menu
   * `Username`: Username to be display in side menu
   * `AuthUser`, `AuthToken`: To be used when sending basic authentication header
 * __Methods__
@@ -78,7 +79,7 @@ layout: docs-layout
 
 ##### Event
 
-`@import(UIEvent)`
+_Import not needed, all methods are static_
 
 * __Methods__
   * `broadcast(event:string, data:any)`: broadcast an event using `EventAggregator`
