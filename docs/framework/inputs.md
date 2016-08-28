@@ -276,7 +276,7 @@ _inherits attributes from `ui-input`_
 A multiple file drag-drop input
 
 ```html
-<ui-file>Label></ui-file>
+<ui-file>Label</ui-file>
 ```
 
 * Creates a drop-zone for dragging files onto, allows adding of multiple files
