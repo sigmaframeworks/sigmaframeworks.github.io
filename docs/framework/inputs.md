@@ -52,6 +52,7 @@ layout: docs-layout
   </ui-button>
   ```
   * Creates a non-editable dropdown styled button, the button label will be updated to selected menu text
+  * Value will be set with active menu:id
 
 <br/>
 
