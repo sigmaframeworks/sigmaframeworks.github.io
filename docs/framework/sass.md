@@ -5,7 +5,7 @@ layout: docs-layout
 
 ## SASS Variables
 
-For a complete list of available color [see this](http://demo.sigmaframeworks.io/#/styles/colors)
+For a complete list of available color [click here](http://demo.sigmaframeworks.io/#/styles/colors)
 
 ----
 
