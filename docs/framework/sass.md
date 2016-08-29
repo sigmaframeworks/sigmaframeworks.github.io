@@ -193,6 +193,9 @@ $input-addon-text           : $cg-7 !default;
 
 $input-button-bg            : $secondary !default;
 $input-button-text          : $secondary-text !default;
+
+$input-error-tooltip-bg     : $floral-white !default;
+$input-error-tooltip-text   : $danger !default;
 ```
 
 ##### Date Input
