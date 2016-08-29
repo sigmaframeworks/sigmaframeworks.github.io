@@ -54,7 +54,6 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
           "lodash",
           "moment",
           "numeral",
-          "aurelia-validatejs",
           "aurelia-fetch-client",
           {
             "name": "text",
