@@ -16,7 +16,9 @@ layout: docs-layout
   * `Username`: Username to be display in side menu
   * `AuthUser`, `AuthToken`: To be used when sending basic authentication header
 * __Methods__
+  * `login(authUser, authToken?)`: create authenticated session, and navigate to default route.
   * `logout()`: clear authenticated session, and navigate to login. Must have a route named `login`
+
   * `shared(key, value)`: share objects across views, these wont be available across sessions
   * `session(key, value)`: get/save objects from session storage
   * `persist(key, value)`: get/save objects from local storage

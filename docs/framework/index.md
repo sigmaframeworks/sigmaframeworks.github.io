@@ -11,7 +11,7 @@ layout: docs-layout
 
 Starting a project with `aurelia-cli` and `ui-skeleton` project.
 
-* ###### Download the skeleton project [here](//github.com/sigmaframeworks/sigma-ui-skeleton)
+* ###### Download the skeleton project [here](//github.com/sigmaframeworks/sigma-ui-skeleton/archive/framework.zip)
 
 * ###### Setup npm pre-requisites
   * Install `node`
