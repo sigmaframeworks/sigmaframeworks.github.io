@@ -143,6 +143,7 @@ $statsbar-label             : $wg-7 !default;
 ```scss
 $menu-link-bg               : transparent !default;
 $menu-link-text             : $primary !default;
+$menu-title-text            : $primary !default;
 
 $menu-hover-bg              : rgba($primary, .5) !default;
 $menu-hover-text            : $primary-text !default;

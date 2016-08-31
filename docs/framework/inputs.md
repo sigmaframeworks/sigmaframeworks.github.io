@@ -59,7 +59,7 @@ layout: docs-layout
 * __Button with Menu__
 
   ```html
-  <ui-button menu>
+  <ui-button menu label.bind="string">
     <section>Title</section>
     <menu id="" icon="string">label</menu>
     <divider></divider>
@@ -68,16 +68,38 @@ layout: docs-layout
   ```
   * Creates a button with a menu, unlike the dropdown the button label does not change, useful for creating extra options like button
 
+* __ButtonGroup__
+
+  ```html
+  <ui-button-group
+    toggle.bind="string"
+    value.bind="any"
+    theme-property
+    size-property
+    style-property
+    orientation-property>
+    <ui-button value.bind="any" label="string"></ui-button>
+  </ui-button>
+  ```
+  * `theme-property` when used will apply theme to all child buttons, else individual buttons control thier own theme
+  * `size-property` and `style-property` will override all child button size and style
+  * `orientation-property` default orientation is horizontal, pass `vertical` to create a vertical button group
+  * `toggle` enables toggle, default single select like radio buttons, `toggle='multiple'` will enable multiple selection like checkboxes
+  * `value` when toggle enabled the selected value/values will be bound
+
 ----
 
 ##### Switch
 
 ```html
 <ui-switch
-  checked.bind="boolean"
+  value.bind="any"
 
-  label-on="On"
-  label-off="Off"
+  on-label="On"
+  off-label="Off"
+
+  on-value="true"
+  off-value="false"
 
   width="number"
 
@@ -86,6 +108,19 @@ layout: docs-layout
 ```
 
   * `width` em size
+  * Unlike normal checkboxes a switch can be used to toggle between two non-boolean values
+    * `on-value` will be used as value when switch is on
+    * `off-value` will be used as value when switch is off
+
+----
+
+##### Display Input
+
+```html
+<ui-display value.bind="string" label-top | label-hide | auto-width>Label</ui-display>
+```
+
+* Creates an input style static text display with label, useful for displaying values in a form instead of using readonly inputs
 
 ----
 
@@ -127,13 +162,14 @@ layout: docs-layout
     label-hide>Label</ui-input>
   ```
 
-    * `input-type`: `text` `password` `number` `decimal` `file` `email` `url` `search` `capitalize`
+    * `input-type`: `text` `password` `number` `integer` `decimal` `file` `email` `url` `search` `capitalize`
     * `checkbox`: add a checkbox add-on to enable/disable input
     * `help-text`: small text to be displayed below the input element
     * `prefix`/`suffix`: addon icon/text to be displayed to the left/right of the input element
     * `button`: addon button to displayed
     * `required`: add a `*` indicator to the end of the label
     * `clear`: add an `x` overlay to clear inputted text
+    * `integer` and `decimal` types will convert input to Number, where as `number` will restrict input to numeric but keep the value as String
 
     <br/>
 
@@ -303,3 +339,54 @@ _inherits attributes from `ui-input`_
 * `country`: country ISO-2 code for using when input is for national numbers only
 * `international`: ignore ISO-2 country code and accept input starting with international dialing code
 * `isd-code` `area-code` `phone` `extension`: phone number parts
+
+
+----
+
+##### Checkbox/Radio
+
+```html
+<ui-checkbox checked.bind="boolean" disabled.bind="boolean">Label</ui-checkbox>
+
+<ui-radio checked.bind="boolean" disabled.bind="boolean" value.bind="any">Label</ui-radio>
+
+<ui-option-group label.bind="Input Label" value.bind="any">
+  <!-- checkboxes/radios -->
+</ui-option-group>
+```
+
+* radio input requires a value to be associated
+* when option-group contains radio options, value will be bound to selected option value
+
+----
+
+##### Language Selector
+
+A dropdown styled input for adding and removing languages for content editors. The dropdown displays a list of selected languages and available languages, which can be added or removed
+
+```html
+<ui-language
+  languages.bind="Map<string, any>"
+  value.bind="language"
+  add.trigger="fn($event)"
+  delete.trigger="fn($event)"
+  select.trigger="fn($event)"
+  beforeselect.trigger="fn($event)">Label</ui-language>
+```
+
+* `languages` a map of objects with language codes as keys
+* `value` selected language code
+* `add` new language added to selected list, new language code `$event.detail`
+* `delete` language removed from selected list, deleting language code `$event.detail`
+* `select` active language changed in selected list, active language code `$event.detail`
+* `beforeselect` active language changing in selected list, activating language code `$event.detail`. return `false` to prevent change.
+
+----
+
+##### Markdown Editor
+
+A textarea with basic formatting toolbar for markdown syntax. Toolbar tools for inserting/formatting h1-h6 headings, bold, italic, lists, image and anchor, also include `help` and `preview` options. Markdown preview uses `kramed` parser with `github flavored markdown`.
+
+```html
+<ui-markdown value.bind="string" rows.bind="number">Label</ui-markdown>
+```
