@@ -257,6 +257,8 @@ layout: docs-layout
       data-id="string"
       data-sort="string"
 
+      use-virtual="boolean"
+
       format="string"
       symbol="string"
       summary="string"
@@ -286,6 +288,7 @@ layout: docs-layout
 
   * __DataGrid Attributes__
     * `data-list`: Array of data models
+    * `use-virtual`: Use `aurelia-ui-virtualization` for rendering large data-set
     * `empty-text`: text to be displayed when data-list is empty
     * `default-sort`: default sort column id
     * `default-order`: default sort order
