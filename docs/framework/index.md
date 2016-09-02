@@ -48,7 +48,14 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
         "name": "ui-framework.js",
         "prepend": [
           "node_modules/whatwg-fetch/fetch.js",
-          "node_modules/fabric/dist/fabric.js"
+          // add if using amCharts
+          "node_modules/fabric/dist/fabric.js",
+          "node_modules/amcharts/dist/amcharts/amcharts.js",
+          "node_modules/amcharts/dist/amcharts/pie.js",
+          "node_modules/amcharts/dist/amcharts/serial.js",
+          "node_modules/amcharts/dist/amcharts/themes/light.js",
+          "node_modules/amcharts/dist/amcharts/plugins/export/export.js"
+          // ------------
         ],
         "dependencies": [
           "lodash",
@@ -65,15 +72,17 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
             "main": "kramed"
           },
           {
-            "name": "validate.js",
-            "path": "../node_modules/validate.js",
-            "main": "validate"
-          },
-          {
             "name": "aurelia-validation",
             "path": "../node_modules/aurelia-validation/dist/amd",
             "main": "aurelia-validation"
           },
+          // add if using datagrid with large data
+          {
+            "name": "aurelia-ui-virtualization",
+            "path": "../node_modules/aurelia-ui-virtualization/dist/amd",
+            "main": "aurelia-ui-virtualization"
+          },
+          // ------------
           // add if using `aurelia-i18n` plugin
           {
             "name": "i18next",
@@ -91,11 +100,6 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
             "main": "aurelia-i18n"
           },
           // ------------
-          {
-            "name": "amcharts",
-            "path": "../node_modules/amcharts/dist",
-            "main": "amcharts/amcharts"
-          },
           {
             "name": "sigma-ui-framework",
             "path": "../node_modules/sigma-ui-framework",
@@ -142,7 +146,7 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
         // Send authorization header with every request
         .addAuthHeader(bool)
 
-        .loadCharts()
+        .useAmCharts()
         .languages(array<{id, name}>)
     });
 

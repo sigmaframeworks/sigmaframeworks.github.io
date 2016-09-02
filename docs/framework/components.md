@@ -261,7 +261,7 @@ layout: docs-layout
 
       format="string"
       symbol="string"
-      summary="string"
+      summary="string" | summary.call="fn()"
       labels="array"
 
       class="string"
@@ -296,7 +296,7 @@ layout: docs-layout
     * `selectable`: allow row selection
     * `auto-height`: default style if flex stretched, use auto-height to remove flex stretch
     * `rowselect`: event trigger, access row model `$event.detail`
-    * `linkclick`: event trigger when button/link/menu clicked, `$event.detail = {dataId:column_id, model: row_model}`
+    * `linkclick`: event trigger when button/link/menu clicked, `$event.detail = {dataId:column_id, record: row_model}`
 
   *	__Column Attributes__
     * `data-id`: model property or a unique identifier
@@ -304,9 +304,10 @@ layout: docs-layout
     * `format`: date formatting uses `momentjs`, number formatting using `numeraljs`
     * `symbol`: symbol prefix to used in number format if required
     * `summary`: enables summary on this column, types available `sum`, `avg`
+    * `summary.call`: alternatively pass callback function to calculate summary value
     * `labels`: array or object of strings to be used to display labels
-    * `value.call($model)`: a callable function that will return custom value which will be formatted as per column settings. `$model={ value: value, column: column, model: model }`
-    * `display.call($model)`: a callable function that will return custom display, this will skip the column formatting. `$model={ value: value, column: column, model: model }`
+    * `value.call($model)`: a callable function that will return custom value which will be formatted as per column settings. `$model={ value, column, record }`
+    * `display.call($model)`: a callable function that will return custom display, this will skip the column formatting. `$model={ value, column, record }`
     * `button.call($model)`: a callable function to display custom buttons, return string to display in place of button, else return `{icon: string, title: string, theme: string, disabled: bool}`
 
 
@@ -376,13 +377,20 @@ UITreeModel = {
 
   ```html
   <ui-chart chart-title=""
-    chart-options="<AmChart Options>"
+    chart-data.bind="Array<any>"
+    chart-options.bind="<AmChart Options>"
+    build.call="fn(canvas, data)"
     height="<number>">
     <!-- panel header buttons -->
   </ui-chart>
   ```
-  * generic chart element accepts complete amCharts chart option.
-  * See amChart [demos](https://www.amcharts.com/demos/) or [documentation](https://docs.amcharts.com/3/javascriptcharts/AmChart)
+  * When using amCharts
+    * generic chart element accepts complete amCharts chart option.
+    * See amChart [demos](https://www.amcharts.com/demos/) or [documentation](https://docs.amcharts.com/3/javascriptcharts/AmChart)
+  * When using other charting library
+    * Provide a callback function using `build.call`, this method will be passed
+      - `canvas`: the chart container
+      - `data`: the current data array
 
 <br/>
 

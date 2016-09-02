@@ -339,7 +339,13 @@ _inherits attributes from `ui-input`_
 * `country`: country ISO-2 code for using when input is for national numbers only
 * `international`: ignore ISO-2 country code and accept input starting with international dialing code
 * `isd-code` `area-code` `phone` `extension`: phone number parts
-
+* Using Validation Rule for phone numbers
+  ```ts
+  ValidationRules
+    .ensure('phone')
+    .satisfies('phone')
+    .on(model);
+  ```
 
 ----
 
@@ -380,6 +386,13 @@ A dropdown styled input for adding and removing languages for content editors. T
 * `delete` language removed from selected list, deleting language code `$event.detail`
 * `select` active language changed in selected list, active language code `$event.detail`
 * `beforeselect` active language changing in selected list, activating language code `$event.detail`. return `false` to prevent change.
+* Using Validation Rule for multiple language content
+  ```ts
+  ValidationRules
+    .ensure('languageModels')
+    .satisfies('language', validationController, languageInputViewModel)
+    .on(model);
+  ```
 
 ----
 
