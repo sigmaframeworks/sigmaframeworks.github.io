@@ -11,22 +11,22 @@ $secondary: #F26D43;
 @import "desktop";
 @import "docs";
 
-
 .post-section {
-  padding: 2em 0;
+    padding: 2em 0;
 
-  &.border {
-    border-bottom: 1px solid #ccc;
-  }
-  .post-title {
-    font-size: 2rem;
-  }
-  .post-date {
-    color: #999;
-    font-size: .9rem;
-  }
+    &.border {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    .post-date {
+        color    : #999;
+        font-size: .9rem;
+    }
 }
-
 
 section.screen {
     background: $secondary;
@@ -56,14 +56,55 @@ section.screen {
 }
 
 .error-page {
-  padding: 70px 20px 70px 300px;
-  min-height: 348px;
-  background: url("../images/unplugged.png") no-repeat left 50px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  h1 {
-    color: #666;
+    padding            : 70px 20px 70px 300px;
+    min-height         : 348px;
+    background         : url('../images/unplugged.png') no-repeat left 50px;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+
+    h1 {
+        color: #666;
+    }
+}
+
+.card-form-options {
+  border-top: 1px solid #ddd;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+    font-size: 1.2em;
+    position: relative;
+    input {
+      // visibility: hidden;
+      position: absolute;
+      top: .7em;
+      left: 2.5em;
+    }
+    label {
+      cursor: pointer;
+      padding: .4em 1em .4em 4em;
+      display: block;
+      // position: absolute;
+      // top:0;left:0;right:0;bottom:0;
+    }
+    input:checked ~ label {
+      background: $primary;
+      color: white;
+    }
   }
+  }
+}
+
+.btn-paypal {
+    padding      : 0;
+    border-radius: 8px;
+overflow: hidden;
+    img {
+        height        : 24px;
+        pointer-events: none;
+    }
 }

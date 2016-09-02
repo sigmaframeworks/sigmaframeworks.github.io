@@ -1,6 +1,9 @@
 .col-auto {
   flex: 0 0 auto;
 }
+.col-fill {
+  flex: 1 1 0;
+}
 
 strong, .strong {
   font-weight: 500;
