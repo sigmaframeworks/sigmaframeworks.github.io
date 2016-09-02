@@ -296,7 +296,7 @@ layout: docs-layout
     * `selectable`: allow row selection
     * `auto-height`: default style if flex stretched, use auto-height to remove flex stretch
     * `rowselect`: event trigger, access row model `$event.detail`
-    * `linkclick`: event trigger, `$event.detail = {dataId:column_id, model: row_model}`
+    * `linkclick`: event trigger when button/link/menu clicked, `$event.detail = {dataId:column_id, model: row_model}`
 
   *	__Column Attributes__
     * `data-id`: model property or a unique identifier
