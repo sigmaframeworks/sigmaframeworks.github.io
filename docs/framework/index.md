@@ -123,7 +123,6 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
   ```ts
   aurelia.use
     .plugin('aurelia-validation')
-    .plugin('aurelia-validatejs')
     // Add the following to use aurelia-i18n internalization plugin
     .plugin('aurelia-i18n', (instance) => {
 			instance.i18next.use(Backend);
