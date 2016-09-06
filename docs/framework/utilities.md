@@ -109,7 +109,7 @@ _Inject not needed, all methods are static_
 * __Methods__
   * `dispose()`: dispose the model
   * `isDirty()`: check if model properties have changed
-  * `saveChanges()`: update the original values with current values, note this does call the Rest API
+  * `saveChanges()`: update the original values with current values, note this does not call the Rest API
   * `discardChanges()`: discard any changes made to the model properties
 
 ----
