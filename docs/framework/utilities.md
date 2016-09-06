@@ -9,7 +9,8 @@ layout: docs-layout
 
 ##### Application
 
-`@import(UIApplication)`
+`import {UIApplication} from 'sigma-ui-framework'`
+`@inject(UIApplication)`
 
 * __Properties__
   * `IsAuthenticated`: Property used to enable/disable authentication driven elements like main side-menu
@@ -66,7 +67,8 @@ layout: docs-layout
 
 ##### Http Service
 
-`@import(UIHttpService)`
+`import {UIHttpService} from 'sigma-ui-framework'`
+`@inject(UIHttpService)`
 
 * __Methods__
   * `setBaseUrl(url)`: override default base url. the default base url can be set in plugin config.
@@ -81,7 +83,8 @@ layout: docs-layout
 
 ##### Event
 
-_Import not needed, all methods are static_
+`import {UIEvent} from 'sigma-ui-framework'`
+_Inject not needed, all methods are static_
 
 * __Methods__
   * `broadcast(event:string, data:any)`: broadcast an event using `EventAggregator`
