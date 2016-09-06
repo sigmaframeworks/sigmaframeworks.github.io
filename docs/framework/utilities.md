@@ -10,6 +10,7 @@ layout: docs-layout
 ##### Application
 
 `import {UIApplication} from 'sigma-ui-framework'`
+
 `@inject(UIApplication)`
 
 * __Properties__
@@ -68,6 +69,7 @@ layout: docs-layout
 ##### Http Service
 
 `import {UIHttpService} from 'sigma-ui-framework'`
+
 `@inject(UIHttpService)`
 
 * __Methods__
