@@ -86,6 +86,7 @@ layout: docs-layout
 ##### Event
 
 `import {UIEvent} from 'sigma-ui-framework'`
+
 _Inject not needed, all methods are static_
 
 * __Methods__
