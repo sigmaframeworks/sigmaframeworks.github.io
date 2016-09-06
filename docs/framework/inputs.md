@@ -387,6 +387,7 @@ A dropdown styled input for adding and removing languages for content editors. T
 * `select` active language changed in selected list, active language code `$event.detail`
 * `beforeselect` active language changing in selected list, activating language code `$event.detail`. return `false` to prevent change.
 * Using Validation Rule for multiple language content
+
   ```ts
   ValidationRules
     .ensure('languageModels')
