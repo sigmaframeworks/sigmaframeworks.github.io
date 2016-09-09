@@ -3,25 +3,27 @@ title: Getting Started
 layout: docs-layout
 ---
 
-## Getting Started
+# Getting Started
 
-----
+--------------------------------------------------------------------------------
 
-##### Start with Skeleton Project
+## Start with Skeleton Project
 
 Starting a project with `aurelia-cli` and `ui-skeleton` project.
 
-* ###### Download the skeleton project [here](//github.com/sigmaframeworks/sigma-ui-skeleton/archive/framework.zip)
+- ###### Download the skeleton project [here](//github.com/sigmaframeworks/sigma-ui-skeleton/archive/framework.zip)
 
-* ###### Setup npm pre-requisites
-  * Install `node`
-  * Install `aurelia-cli`
+- ###### Setup npm pre-requisites
+
+  - Install `node`
+  - Install `aurelia-cli`
 
     ```bash
     npm -g install aurelia-cli
     ```
 
-* ###### Create an aurelia project
+- ###### Create an aurelia project
+
   ```bash
   mkdir <project_dir>
   cd <project_dir>
@@ -30,18 +32,24 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
   npm install sigma-ui-framework --save
   ```
 
-* ###### Replace generated files with skeleton files
+- ###### Replace generated files with skeleton files
+
   ```bash
   cp -r <skeleton_dir>/* .
   ```
 
-* ###### Update `<project_dir>/aurelia_project/aurelia.json`
-  * Change `"stub": true` to `"stub": false`
+- ###### Update `<project_dir>/aurelia_project/aurelia.json`
 
-  * Add to `transpiler/dtsSource`      
-    `"./node_modules/sigma-ui-framework/dist/typings/**/*.d.ts"`
+  - Change `"stub": true` to `"stub": false`
 
-  * Add to `bundles` object after `app-bundle.js`
+  - Add to `transpiler/dtsSource`<br>
+
+    ```
+    "./node_modules/sigma-ui-libs/typings/*.d.ts",
+    "./node_modules/sigma-ui-framework/dist/typings/**/*.d.ts"
+    ```
+
+  - Add to `bundles` object after `app-bundle.js`
 
     ```json
     {
@@ -101,6 +109,10 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
           },
           // ------------
           {
+            "name": "sigma-libs",
+            "path": "../node_modules/sigma-libs",
+            "main": "index"
+          }, {
             "name": "sigma-ui-framework",
             "path": "../node_modules/sigma-ui-framework",
             "main": "sigma-ui-framework"
@@ -109,31 +121,32 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
     }
     ```
 
-* ###### Development and Deployment
-  * `au run --watch`: Run project in development mode, serves the built project on `localhost:9000`
-  * `au build --env prod`: Build project for production deployment
-  * `gulp prod`: Build sass files and copy required files to deployment ready folder `dist/`
+- ###### Development and Deployment
 
-----
+  - `au run --watch`: Run project in development mode, serves the built project on `localhost:9000`
+  - `au build --env prod`: Build project for production deployment
+  - `gulp prod`: Build sass files and copy required files to deployment ready folder `dist/`
 
-##### Aurelia Entry Point
+--------------------------------------------------------------------------------
 
-* `src/main.ts` Main aurelia entry point
+## Aurelia Entry Point
 
-  ```ts
+- `src/main.ts` Main aurelia entry point
+
+  ```typescript
   aurelia.use
     .plugin('aurelia-validation')
     // Add the following to use aurelia-i18n internalization plugin
     .plugin('aurelia-i18n', (instance) => {
-			instance.i18next.use(Backend);
-			return instance.setup({
-				backend: { loadPath: './locales/{{lng}}/{{ns}}.json' },
-				lng: 'de',
-				attributes: ['t', 'i18n'],
-				fallbackLng: 'en',
-				debug: false
-			});
-		})
+            instance.i18next.use(Backend);
+            return instance.setup({
+                backend: { loadPath: './locales/{{lng}}/{{ns}}.json' },
+                lng: 'de',
+                attributes: ['t', 'i18n'],
+                fallbackLng: 'en',
+                debug: false
+            });
+        })
     .plugin('sigma-ui-framework', function(config) {
       config
         .title(string)
@@ -164,4 +177,4 @@ Starting a project with `aurelia-cli` and `ui-skeleton` project.
     });
   ```
 
-  * Read about the [aurelia-i18n](https://github.com/aurelia/i18n) plugin here.
+  - Read about the [aurelia-i18n](https://github.com/aurelia/i18n) plugin here.
