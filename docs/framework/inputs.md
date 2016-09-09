@@ -16,7 +16,7 @@ layout: docs-layout
 </ui-form>
 ```
 
-* `auto-grid`: create a form with a default two-column layout
+* `auto-grid`: forms by default have two-column layout, `auto-grid` will override two-column layout to use grid system
 * `busy`: bindable property to disable all input elements and display loader overlay when busy to prevent changes
 * `submit`: event triggered when enter key pressed on any input, except textarea
 

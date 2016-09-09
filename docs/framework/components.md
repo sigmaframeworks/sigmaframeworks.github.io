@@ -37,7 +37,7 @@ layout: docs-layout
     * `id`: link id to identify the menu clicked
     * `icon`: icon glyph classname
 
-  * `menuclick`: `$event.detail` contains the menu item `{id, text}`
+  * `menuclick`: `$event.detail` contains the menu item `id`
 
 ----
 
