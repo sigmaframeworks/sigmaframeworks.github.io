@@ -247,6 +247,7 @@ layout: docs-layout
 <ui-datagrid
   data-list.bind="array"
   empty-text.bind="string"
+	use-virtual.bind="bool"
   summary-row.bind="bool | model"
   default-sort="<column_id>"
   default-order="asc | desc"
@@ -256,8 +257,6 @@ layout: docs-layout
     <ui-data-column
       data-id="string"
       data-sort="string"
-
-      use-virtual="boolean"
 
       format="string"
       symbol="string"
