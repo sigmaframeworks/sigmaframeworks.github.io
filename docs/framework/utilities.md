@@ -41,7 +41,8 @@ layout: docs-layout
     icon:string;
     theme:string;
     extraClass:string;
-    autoHide:boolean;
+    // 0 to disable autoHide
+    autoHide:number;
   }
   ```
 
@@ -183,16 +184,3 @@ _Inject not needed, all methods are static_
   };
   ```
 
-----
-
-###### Toast options
-
-```ts
-ToastOptions = {
-  message: '',
-  icon: '',
-  theme: 'default',
-  autoHide: true,
-  extraClass: ''
-}
-```
