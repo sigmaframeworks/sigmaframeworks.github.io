@@ -46,7 +46,7 @@ layout: docs-layout
   }
   ```
 
-  * `alert(message | AlertConfig)`: display simple alert box
+  * `alert(message | AlertConfig):Promise<boolean>`: display simple alert box
 
   ```ts
   AlertConfig = {
