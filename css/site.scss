@@ -1,4 +1,4 @@
----
+--- 
 ---
 
 // Colors
@@ -12,105 +12,115 @@ $secondary: #F26D43;
 @import "docs";
 
 .post-section {
-    padding: 2em 0;
+  padding: 2em 0;
 
-    &.border {
-        border-bottom: 1px solid #ccc;
-    }
+  &.border {
+    border-bottom: 1px solid #ccc;
+  }
 
-    .post-title {
-        font-size: 2rem;
-    }
+  .post-title {
+    font-size: 2rem;
+  }
 
-    .post-date {
-        color    : #999;
-        font-size: .9rem;
-    }
+  .post-date {
+    color    : #999;
+    font-size: .9rem;
+  }
+
+  .post-content {
+    font-size: 1.3em;
+	line-height: 2;
+	
+	h1,h2,h3,h4,h5,h6 {
+		margin: 1em 0;
+	}
+	
+  }
 }
 
 section.screen {
-    background: $secondary;
-    background: -moz-linear-gradient(top, $secondary 0%, $primary 100%);
-    background: -webkit-linear-gradient(top, $secondary 0%, $primary 100%);
-    background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
-    //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=  '#f27143', endColorstr='#ef5365', GradientType=0);
-    color     : #fff;
+  background: $secondary;
+  background: -moz-linear-gradient(top, $secondary 0%, $primary 100%);
+  background: -webkit-linear-gradient(top, $secondary 0%, $primary 100%);
+  background: linear-gradient(to bottom, $secondary 0%, $primary 100%);
+  //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=  '#f27143', endColorstr='#ef5365', GradientType=0);
+  color     : #fff;
 
-    & .image {
-        height         : 400px;
-        background     : url('../images/screen.png') no-repeat top center;
-        background-size: cover;
-    }
+  & .image {
+    height         : 400px;
+    background     : url('../images/screen.png') no-repeat top center;
+    background-size: cover;
+  }
 }
 
 .chart-theme-dot {
-    display: inline-block;
-    width  : 30px;
-    margin : 0 2px;
+  display: inline-block;
+  width  : 30px;
+  margin : 0 2px;
 }
 
 .chart-theme-name {
-    display   : inline-block;
-    width     : 80px;
-    text-align: right;
+  display   : inline-block;
+  width     : 80px;
+  text-align: right;
 }
 
 .error-page {
-    padding            : 70px 20px 70px 300px;
-    min-height         : 348px;
-    background         : url('../images/unplugged.png') no-repeat left 50px;
-    -webkit-user-select: none;
-    -moz-user-select   : none;
-    -ms-user-select    : none;
-    user-select        : none;
+  padding            : 70px 20px 70px 300px;
+  min-height         : 348px;
+  background         : url('../images/unplugged.png') no-repeat left 50px;
+  -webkit-user-select: none;
+  -moz-user-select   : none;
+  -ms-user-select    : none;
+  user-select        : none;
 
-    h1 {
-        color: #666;
-    }
+  h1 {
+    color: #666;
+  }
 }
 
 .card-form-options {
-    border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 
-    ul {
-        list-style: none;
-        padding   : 0;
-        margin    : 0;
+  ul {
+    list-style: none;
+    padding   : 0;
+    margin    : 0;
 
-        li {
-            font-size: 1.2em;
-            position : relative;
+    li {
+      font-size: 1.2em;
+      position : relative;
 
-            input {
-                // visibility: hidden;
-                position: absolute;
-                top     : .7em;
-                left    : 2.5em;
-            }
+      input {
+        // visibility: hidden;
+        position: absolute;
+        top     : .7em;
+        left    : 2.5em;
+      }
 
-            label {
-                cursor : pointer;
-                padding: .4em 1em .4em 4em;
-                display: block;
-                // position: absolute;
-                // top:0;left:0;right:0;bottom:0;
-            }
+      label {
+        cursor : pointer;
+        padding: .4em 1em .4em 4em;
+        display: block;
+        // position: absolute;
+        // top:0;left:0;right:0;bottom:0;
+      }
 
-            input:checked ~ label {
-                background: $primary;
-                color     : white;
-            }
-        }
+      input:checked ~ label {
+        background: $primary;
+        color     : white;
+      }
     }
+  }
 }
 
 .btn-paypal {
-    padding      : 0;
-    border-radius: 2px;
-    overflow     : hidden;
+  padding      : 0;
+  border-radius: 2px;
+  overflow     : hidden;
 
-    img {
-        height        : 24px;
-        pointer-events: none;
-    }
+  img {
+    height        : 24px;
+    pointer-events: none;
+  }
 }

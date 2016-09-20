@@ -22,7 +22,7 @@ layout: default
 					    Posted by {{ post.author }} on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
 					  </div>
 	        <hr>
-	        {{ content }}
+	        <div class="post-content">{{ content }}</div>
 	    </article>
 			<hr/>
 		{% include disqus.html %}
