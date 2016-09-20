@@ -31,6 +31,7 @@ layout: docs-layout
     click.trigger="fn()"
     icon.bind="string"
     theme.bind="theme"
+    no-shadow
     theme-property
     size-property
     style-property></ui-button>
@@ -38,6 +39,7 @@ layout: docs-layout
   * `theme.bind` or `theme-property`: `default` `primary` `secondary` `info` `danger` `success` `warning`
   * `size-property`: `normal` `small` `large`
   * `style-property`: `round` `square` `icon-top`
+  * `no-shadow`: remove shadows
 
 <br/>
 
