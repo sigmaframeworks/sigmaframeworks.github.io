@@ -22,3 +22,9 @@ typescript:
   color: '#949667'
   description: >
     JavaScript is TypeScript
+
+sigma-ui-framework:
+  name: Sigma UI Framework
+  color: '#E55264'
+  description: >
+    Our bespoke UI Framework
